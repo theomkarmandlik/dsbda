@@ -1,0 +1,21 @@
+✅ Practical 6: Word Cloud
+🎯 Aim:
+
+To visualize text data.
+
+💻 Code:
+
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+text = "Data science is powerful and useful"
+
+wc = WordCloud().generate(text)
+
+plt.imshow(wc)
+plt.axis("off")
+plt.show()
+
+🗣️ Viva:
+
+WordCloud shows most frequent words visually.

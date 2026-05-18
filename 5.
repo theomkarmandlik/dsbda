@@ -1,0 +1,29 @@
+✅ Practical 5: Data Preprocessing (Air Quality & Heart Disease)
+🎯 Aim:
+To clean and prepare data for analysis.
+
+a) Data Cleaning
+df.dropna(inplace=True)
+
+
+b) Data Integration
+merged = pd.merge(df_air, df_heart, on='id')
+
+
+c) Data Transformation
+df['age'] = df['age'] / 10
+
+
+d) Error Correction
+df['chol'] = df['chol'].replace(0, df['chol'].mean())
+
+
+e) Model Building
+from sklearn.linear_model import LogisticRegression
+
+model = LogisticRegression()
+model.fit(X, y)
+
+🗣️
+
+Builds predictive model using ML.

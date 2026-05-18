@@ -1,0 +1,36 @@
+✅ Practical 4: Facebook Metrics Dataset Operations
+🎯 Aim:
+To perform data manipulation using Python (Pandas).
+🧠 Concept:
+We use Pandas for handling structured data.
+------------------------------------------------------
+a) Create Data Subsets
+
+import pandas as pd
+
+df = pd.read_csv("facebook.csv")
+
+subset = df[['like', 'share', 'comment']]
+print(subset.head())
+------------------------------------------------------
+b) Merge Data
+
+df1 = df[['post_id', 'like']]
+df2 = df[['post_id', 'share']]
+
+merged = pd.merge(df1, df2, on='post_id')
+print(merged.head())
+------------------------------------------------------
+c) Sort Data
+sorted_df = df.sort_values(by='like', ascending=False)
+print(sorted_df.head())
+------------------------------------------------------
+d) Transpose Data
+print(df.T)
+------------------------------------------------------
+e) Shape & Reshape
+print(df.shape)   # rows, columns
+
+reshaped = df.values.reshape(-1, 1)
+print(reshaped[:5])
+------------------------------------------------------
